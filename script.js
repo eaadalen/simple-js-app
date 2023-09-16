@@ -1,7 +1,5 @@
 let pokemonRepository = (function () {
-    var pokemonList = [{name:"Bulbasaur",height:0.7,type:["grass","poison"]},   //object containing Bulbasaur
-                       {name:"Charmander",height:0.6,type:["fire"]},            //object containing Charmander
-                       {name:"Pikachu",height:0.4,type:["electric"]}];          //object containing Pikachu
+    var pokemonList = [];
     return {
         add: function(pokemon) {
           pokemonList.push(pokemon);
@@ -11,3 +9,13 @@ let pokemonRepository = (function () {
         }
     }
 })();
+
+function list_name(item) {
+    document.write(item.name + " (height: " + item.height + ") " + item.type + "<br>");
+}
+
+pokemonRepository.add({name:"Bulbasaur",height:0.7,type:["grass","poison"]});
+pokemonRepository.add({name:"Charmander",height:0.6,type:["fire"]});
+pokemonRepository.add({name:"Pikachu",height:0.4,type:["electric"]});
+pokemonList = pokemonRepository.getAll();
+pokemonList.forEach(list_name);
