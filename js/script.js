@@ -11,9 +11,11 @@ function () {
     }
 
     function addListItem(pokemon) {
-      let list = document.querySelector(".pokemon-list");
+      let list = document.querySelector(".list-group");
       let listItem = document.createElement("li");
+      listItem.classList.add("list-group-item");
       let button = document.createElement("button");
+      button.classList.add("btn btn-primary");
       button.innerText = pokemon.name;
       listItem.appendChild(button);
       list.appendChild(listItem);
