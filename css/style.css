@@ -1,13 +1,23 @@
 body {
-  font-family: Arial, sans-serif;
+    font-family:Arial,sans-serif;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    height: 200px;
 }
 
 #modal-body {
-  text-align: center;
+    text-align:center
+}
+
+ul {
+    border: solid;
 }
